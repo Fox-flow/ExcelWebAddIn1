@@ -9,6 +9,10 @@ obj/
 *.pdb
 *.exe
 *.log
+*.vsidx
+*.db
+*.db-shm
+*.db-wal
 
 ## Office Add-in specific
 *.sln.docstates
