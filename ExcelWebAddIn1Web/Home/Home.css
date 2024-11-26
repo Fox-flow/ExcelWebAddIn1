@@ -179,3 +179,61 @@ html, body {
     pointer-events: none;
     z-index: 1000;
 }
+
+/* Add notification styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.notification.error {
+    background: #f44336;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification-content {
+    position: relative;
+}
+
+.notification-message {
+    display: block;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+.notification-progress {
+    position: absolute;
+    bottom: -12px;
+    left: -24px;
+    width: calc(100% + 48px);
+    height: 3px;
+    background: rgba(255,255,255,0.3);
+}
+
+.notification-progress::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    animation: progress 3s linear;
+}
+
+@keyframes progress {
+    0% { width: 100%; }
+    100% { width: 0%; }
+}
