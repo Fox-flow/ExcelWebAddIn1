@@ -1,0 +1,16 @@
+﻿## Visual Studio files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.dll.refresh
+*.pdb
+*.exe
+*.log
+
+## Office Add-in specific
+*.sln.docstates
+packages/
+node_modules/
